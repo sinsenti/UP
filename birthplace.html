@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Место рождения</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мое место рождения</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+    h1 { color: #333; }
+    p { text-indent: 20px; }
+    table { width: 60%; border-collapse: collapse; margin-top: 20px; border: none; }
+    td { border: 1px solid #ddd; padding: 8px; }
+    td:first-child { font-weight: bold; width: 30%; background-color: #f9f9f9; }
+    .city-image { display: block; margin: 20px auto; max-width: 500px; height: auto; border: 5px outset #a1a1a1; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); padding: 5px; float: left; margin-right: 20px; }
+    .clear { clear: both; }
+    .footer-nav { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; }
+    .footer-nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
+    .footer-nav a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
   <h1>Город Минск, Беларусь</h1>
-  <p>Я родился в городе <em>Минск</em>, столице Беларуси — городе с богатой историей и культурой. </p>
-  <dl>
-    <dt>Город:</dt>
-    <dt>Минск</dt>
-    <dt>Страна:</dt>
-    <dt>Беларусь</dt>
-    <dt>Население:</dt>
-    <dt>около 2 миллионов человек</dt>
-  </dl>
-  <p><a href="index.html" title="Вернуться на главную">Главная</a> |
-     <a href="education.html" title="Перейти к месту учебы">Место учебы</a> |
-     <a href="hobbies.html" title="Перейти к увлечениям">Увлечения</a></p>
+
+  <img src="images/minsk.png" alt="Вид на город Минск" class="city-image" title="Красоты Минска">
+
+  <p>Я родился в городе <strong>Минск</strong>, столице Беларуси — городе с богатой историей и культурой. Минск является крупнейшим городом страны и важным экономическим, политическим, научным и культурным центром.</p>
+
+  <p>Город известен своими широкими проспектами, многочисленными парками и скверами, а также памятниками архитектуры, которые отражают различные исторические эпохи.</p>
+
+  <table>
+    <tbody>
+      <tr><td>Город:</td><td>Минск</td></tr>
+      <tr><td>Страна:</td><td>Беларусь</td></tr>
+      <tr><td>Население:</td><td>около 2 миллионов человек</td></tr>
+      <tr><td>Основан:</td><td>1067 год</td></tr>
+    </tbody>
+  </table>
+
+  <div class="clear"></div>
+
+  <p><a href="#history">Краткая история Минска</a></p>
+
+  <h2 id="history">Краткая история Минска</h2>
+  <p>Минск впервые упоминается в "Повести временных лет" в 1067 году. Город имеет долгую и сложную историю, пережив множество войн и разрушений, но всегда восстанавливался и развивался.</p>
+
+  <div class="footer-nav">
+    <a href="index.html">Главная</a>
+    <a href="education.html">Место учебы</a>
+    <a href="hobbies.html">Увлечения</a>
+  </div>
 </body>
 </html>
