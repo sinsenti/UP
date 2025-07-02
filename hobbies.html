@@ -1,18 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мои увлечения</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    h1 { color: #333; }
-    ul { list-style-type: disc; margin-left: 20px; }
-    .image-container { margin-top: 20px; text-align: center; }
-    .image-container img { border: 2px solid #ddd; padding: 5px; margin: 10px; max-width: 300px; height: auto; vertical-align: middle; }
-    .footer-nav { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; }
-    .footer-nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
-    .footer-nav a:hover { text-decoration: underline; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.8;
+      background: #f9f9f9;
+      color: #333;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 40px;
+      font-size: 1.1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #444;
+    }
+    ul ul {
+      list-style-type: circle;
+      margin-left: 20px;
+    }
+    .image-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .image-container img {
+      border-radius: 12px;
+      border: 3px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      height: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-color: #007bff;
+    }
+    .footer-nav {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+    .footer-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .footer-nav a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .image-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      ul {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -30,14 +104,17 @@
     </li>
   </ul>
 
-  <div class="image-container">
-    <p>Несколько изображений, связанных с моими увлечениями:</p>
-    <img src="images/books.jpg" alt="Стопка книг" title="Моя коллекция книг" width="250" height="auto">
-    <img src="images/run.jpg" alt="Человек бежит" title="Люблю бегать" width="250" height="auto">
-    <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%81%D0%BA%D0%B5%D1%82%D0%B1%D0%BE%D0%BB" target="_blank">
-      <img src="images/ball.jpg" alt="Баскетбольный мяч" title="Узнайте больше о баскетболе" width="250" height="auto">
-    </a>
-  </div>
+<div class="image-container">
+  <a href="https://ru.wikipedia.org/wiki/Чтение" target = "_blank" title="Книги">
+    <img src="images/books.jpg" alt="Стопка книг" />
+  </a>
+  <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%B3" target="_blank" title="Бег">
+    <img src="images/run.jpg" alt="Бег" />
+  </a>
+  <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%81%D0%BA%D0%B5%D1%82%D0%B1%D0%BE%D0%BB" target="_blank" rel="noopener" title="Узнайте больше о баскетболе">
+    <img src="images/ball.jpg" alt="Баскетбольный мяч" />
+  </a>
+</div>
 
   <div class="footer-nav">
     <a href="index.html">Главная</a> |

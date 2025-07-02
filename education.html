@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мое место учебы</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
     h1 { color: #333; }
     table { width: 80%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: middle; }
     th { background-color: #f2f2f2; }
-    .bsu-logo { max-width: 100px; display: block; margin: 10px auto; }
+    .bsu-logo, .gymnasium-photo { max-width: 100px; display: block; margin: 10px auto; }
     .footer-nav { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; }
     .footer-nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
     .footer-nav a:hover { text-decoration: underline; }
@@ -19,13 +19,14 @@
 <body>
   <h1>Мое место учебы</h1>
 
-  <p>Ниже представлена информация о моем образовании:</p>
+  <p>Ниже представлена информация об образовании:</p>
 
   <table>
     <thead>
       <tr>
         <th>Учебное заведение</th>
         <th>Факультет</th>
+        <th>Годы обучения</th>
         <th>Годы обучения</th>
       </tr>
     </thead>
@@ -34,11 +35,13 @@
         <td>Белорусский Государственный Университет</td>
         <td>Факультет прикладной математики и информатики</td>
         <td>2024 - 2028</td>
+          <td><img src="images/bsu.png" alt="Логотип БГУ" class="bsu-logo" /></td>
       </tr>
       <tr>
-        <td colspan="3">
-          <img src="images/bsu.png" alt="Логотип БГУ" class="bsu-logo">
-        </td>
+        <td>Гимназия №17</td>
+        <td>-</td>
+        <td>2013 - 2024</td>
+          <td><img src="images/gymnasium17.jpg" alt="Фото гимназии №17" class="gymnasium-photo" /></td>
       </tr>
     </tbody>
   </table>
@@ -51,8 +54,8 @@
   </dl>
 
   <div class="footer-nav">
-    <a href="index.html">Главная</a> |
-    <a href="birthplace.html">Место рождения</a> |
+    <a href="index.html">Главная</a>
+    <a href="birthplace.html">Место рождения</a>
     <a href="hobbies.html">Увлечения</a>
   </div>
 </body>
