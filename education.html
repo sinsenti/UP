@@ -2,18 +2,163 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Мое место учебы</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    h1 { color: #333; }
-    table { width: 80%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: middle; }
-    th { background-color: #f2f2f2; }
-    .bsu-logo, .gymnasium-photo { max-width: 100px; display: block; margin: 10px auto; }
-    .footer-nav { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; }
-    .footer-nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
-    .footer-nav a:hover { text-decoration: underline; }
+    * {
+      box-sizing: border-box;
+      transition: none !important;
+      animation: none !important;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px auto;
+      max-width: 900px;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #2980b9;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: middle;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f9ff;
+    }
+
+    thead th:last-child {
+      text-align: center;
+    }
+
+    tbody td:last-child {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .bsu-logo, .gymnasium-photo {
+      max-width: 90px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      cursor: default;
+    }
+
+    h3 {
+      margin-top: 40px;
+      color: #2980b9;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    dl {
+      margin-top: 15px;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    dt {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .footer-nav {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .footer-nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+    }
+
+    .footer-nav a:hover {
+      color: #1c5980;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 20px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        padding: 15px;
+      }
+
+      tbody td {
+        border: none;
+        padding: 10px 0;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+      }
+
+      tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        font-weight: 600;
+        color: #2980b9;
+        text-align: left;
+        width: 45%;
+        white-space: nowrap;
+      }
+
+      .bsu-logo, .gymnasium-photo {
+        max-width: 70px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -27,21 +172,21 @@
         <th>Учебное заведение</th>
         <th>Факультет</th>
         <th>Годы обучения</th>
-        <th>Годы обучения</th>
+        <th>Фото</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Гимназия №17</td>
-        <td>-</td>
-        <td>2013 - 2024</td>
-          <td><img src="images/gymnasium17.jpg" alt="Фото гимназии №17" class="gymnasium-photo" /></td>
+        <td data-label="Учебное заведение">Гимназия №17</td>
+        <td data-label="Факультет">-</td>
+        <td data-label="Годы обучения">2013 - 2024</td>
+        <td data-label="Фото"><img src="images/gymnasium17.jpg" alt="Фото гимназии №17" class="gymnasium-photo" /></td>
       </tr>
       <tr>
-        <td>Белорусский Государственный Университет</td>
-        <td>Факультет прикладной математики и информатики</td>
-        <td>2024 - 2028</td>
-          <td><img src="images/bsu.png" alt="Логотип БГУ" class="bsu-logo" /></td>
+        <td data-label="Учебное заведение">Белорусский Государственный Университет</td>
+        <td data-label="Факультет">Факультет прикладной математики и информатики</td>
+        <td data-label="Годы обучения">2024 - 2028</td>
+        <td data-label="Фото"><img src="images/bsu.png" alt="Логотип БГУ" class="bsu-logo" /></td>
       </tr>
     </tbody>
   </table>

@@ -2,20 +2,138 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Мое место рождения</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    h1 { color: #333; }
-    p { text-indent: 20px; }
-    table { width: 60%; border-collapse: collapse; margin-top: 20px; border: none; }
-    td { border: 1px solid #ddd; padding: 8px; }
-    td:first-child { font-weight: bold; width: 30%; background-color: #f9f9f9; }
-    .city-image { display: block; margin: 20px auto; max-width: 500px; height: auto; border: 5px outset #a1a1a1; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); padding: 5px; float: left; margin-right: 20px; }
-    .clear { clear: both; }
-    .footer-nav { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; }
-    .footer-nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
-    .footer-nav a:hover { text-decoration: underline; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px auto;
+      max-width: 900px;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 20px;
+      text-indent: 1.2em;
+    }
+
+    .city-image {
+      max-width: 340px;
+      width: 100%;
+      height: 250px;
+      float: left;
+      margin-right: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 4px solid #ddd;
+      transition: none;
+    }
+
+    table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    td {
+      padding: 12px 20px;
+      vertical-align: middle;
+      border-bottom: 1px solid #eee;
+    }
+
+    td:first-child {
+      font-weight: 600;
+      background-color: #f7f9fc;
+      width: 35%;
+      color: #2c3e50;
+    }
+
+    td:last-child {
+      color: #555;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    p a {
+      color: #2980b9;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    p a:hover {
+      color: #1c5980;
+      text-decoration: underline;
+    }
+
+    h2#history {
+      margin-top: 40px;
+      color: #2980b9;
+      border-bottom: 3px solid #2980b9;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .footer-nav {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .footer-nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #1c5980;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .city-image {
+        float: none;
+        display: block;
+        margin: 0 auto 25px auto;
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      table {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
